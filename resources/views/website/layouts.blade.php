@@ -9,7 +9,7 @@
     <meta name="description" content="title">
     <meta name="keywords" content="" />
     <meta name="author" content="">
-    <title> Freight Portal</title>
+    <title> Treight Portal</title>
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
@@ -21,7 +21,22 @@
     <meta name="twitter:image" content="" />
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
 
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <link rel="manifest" href="site.webmanifest">
     <!-- favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="icon.png">
@@ -69,7 +84,7 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-hover navbar-expand-lg navbar-soft navbar-transparent">
             <div class="container">
-                <a class="navbar-brand" href="/homepage-v1.html">
+                <a class="navbar-brand" href="/">
                     <img src="/upload_files/{{$settings->logo}}" alt="" style="width:100%">
                     <img src="/upload_files/{{$settings->logo}}" alt="" style="width:100%;margin-top: -5px;">
                 </a>
@@ -286,7 +301,8 @@
                 <div class="row flex-column-reverse flex-md-row">
                     <div class="col-md-6">
                         <span>
-                            © 2021 Design Aand Developed By LRB INFOTECH &amp; Copy Right
+                            © 2021 
+                             Copy Right
                             <a href="#">Treight Portal</a>
                         </span>
                     </div>

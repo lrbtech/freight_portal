@@ -27,6 +27,24 @@
 	<link rel="stylesheet" type="text/css" href="/assets/Login_v3/css/util.css">
 	<link rel="stylesheet" type="text/css" href="/assets/Login_v3/css/main.css">
 <!--===============================================================================================-->
+<style>
+	.login100-form-logo {
+    font-size: 60px;
+    color: #333333;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #23316a;
+    margin: 0 auto;
+}
+</style>
 </head>
 <body>
 	
@@ -36,7 +54,7 @@
 				<form method="POST" action="{{ route('admin.login.submit') }}" class="login100-form validate-form">
 				@csrf
 					<span class="login100-form-logo">
-                           <img src="/assets/images/logo.png" alt="wellwell" width="100px">
+                           <img src="/assets/images/logo2.png" alt="wellwell" width="100px">
 						{{-- <i class="zmdi zmdi-landscape"></i> --}}
 					</span>
 
