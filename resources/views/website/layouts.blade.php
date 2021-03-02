@@ -197,9 +197,9 @@
 
                             <ul class="list-unstyled mb-0 mt-3">
                                 <li> <b> <i class="fa fa-map-marker"></i></b><span>{{$settings->address}}</span> </li>
-                                <li> <b><i class="fa fa-phone-square"></i></b><span>{{$settings->landline}}</span> </li>
-                                <li> <b><i class="fa fa-phone-square"></i></b><span>{{$settings->mobile}}</span> </li>
-                                <li> <b><i class="fa fa-headphones"></i></b><span>{{$settings->email}}</span> </li>
+                                <li> <b><i class="fa fa-phone"></i></b><span>{{$settings->landline}}</span> </li>
+                                <li> <b><i class="fa fa-mobile"></i></b><span>{{$settings->mobile}}</span> </li>
+                                <li> <b><i class="fa fa-envelope"></i></b><span>{{$settings->email}}</span> </li>
                                 {{-- <li> <b><i class="fa fa-clock-o"></i></b><span>Mon - Sun / 9:00AM - 8:00PM</span> </li> --}}
                             </ul>
                         </div>
