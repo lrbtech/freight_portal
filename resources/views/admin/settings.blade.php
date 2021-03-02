@@ -48,7 +48,7 @@
                 <div class="col-sm-12 col-md-12">
                   <div class="form-group">
                     <label class="form-label">Landline</label>
-                    <input class="form-control" type="text" id="landline" name="landline" value="{{$settings->vat_percentage}}">
+                    <input class="form-control" type="text" id="landline" name="landline" value="{{$settings->landline}}">
                   </div>
                 </div>
 
