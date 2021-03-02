@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
-
+use Hash;
 class SettingsController extends Controller
 {
     public function __construct()

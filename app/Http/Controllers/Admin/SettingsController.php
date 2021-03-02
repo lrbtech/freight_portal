@@ -9,7 +9,7 @@ use App\Models\settings;
 use App\Models\testimonials;
 use App\Models\slider;
 use Auth;
-
+use Hash;
 class SettingsController extends Controller
 {
     public function __construct()
