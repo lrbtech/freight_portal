@@ -59,8 +59,8 @@
                         <h6 class="text-uppercase text-primary mb-3">"Knowing us"</h6>
                         <h2 class="text-capitalize">Move With Expertise.!</h2>
                         <p>
-                            Swift & Affable, we offer professional transportation services throughout the United Arab Emirates. Our squad is up for the job, from Large to Tiny. Assuring our customers that we stand with our work, putting your satisfaction as our #1 priority. What really makes us stand out is our dedication, great prices, and attention to detail.
-Contact us to learn more from one of our expert staff on how our professional team can help you!
+                            <?php echo html_entity_decode($settings->about_us); ?>
+   
                         </p>
                   
                     </div>
