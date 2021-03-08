@@ -72,6 +72,17 @@
 .hide_field{
 	display:none;
 }
+.login_button{
+    color:#fff;
+}
+@media (max-width:768px)  { 
+.login_button{
+    color:#3454d1;
+}
+.navbar-transparent .navbar-nav .nav-item .nav-link:hover {
+    color: #000;
+}
+}
 	</style>
 	@yield('extra-css')
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/toastr/toastr.css')}}">
@@ -118,7 +129,7 @@
       <a href="javascript:void(null)" class="btn btn-outline-primary text-capitalize" style="cursor: pointer" 
     data-toggle="modal" 
     data-target="#loginModal">
-                                <i class="fa fa-sign-in mr-1" style="color:#fff"></i><span style="color:#fff">Login / Register</span> </a>
+                                <i class="fa fa-sign-in mr-1 login_button"></i><span class="login_button">Login / Register</span> </a>
     @endif
                         </li>
                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
