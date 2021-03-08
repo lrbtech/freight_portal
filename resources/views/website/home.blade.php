@@ -263,7 +263,7 @@ visibility: visible;
                         <h2 class="text-center text-capitalize">
                             exclusive services
                         </h2>
-                        <p class="text-center text-capitalize">handpicked exclusive Services.</p>
+                        <!-- <p class="text-center text-capitalize">handpicked exclusive Services.</p> -->
 
                     </div>
                 </div>
@@ -285,7 +285,7 @@ visibility: visible;
                                 <div class="card__image-header h-250">
                                     <div class="ribbon text-uppercase">Available</div>
                                     <img src="/upload_files/{{$row->image}}" alt="" class="img-fluid w100 img-transition">
-                                    <div class="info"> for Rent</div>
+                                    <div class="info"> for Hire</div>
                                 </div>
                                 <div class="card__image-body">
                                    
@@ -295,7 +295,7 @@ visibility: visible;
 
                                     <p class="text-capitalize">
                                         <i class="fa fa-map-marker"></i>
-                                        Rate Per Km {{$row->rate_per_km}}
+                                        {{$row->rate_per_km}} AED Per Km
                                     </p>
                                
                                 </div>
@@ -319,9 +319,9 @@ visibility: visible;
                 <div class="col-md-8 col-lg-6 mx-auto">
                     <div class="title__head">
                         <h2 class="text-center text-capitalize">
-                            what people says
+                        What People Say
                         </h2>
-                        <p class="text-center text-capitalize">people says about walls property.</p>
+                        <p class="text-center text-capitalize">Expressions About Treight Portal</p>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -336,9 +336,9 @@ visibility: visible;
                         </p>
                     </div>
                     <div class="testimonial__block-users">
-                        <div class="testimonial__block-users-img">
+                        <!-- <div class="testimonial__block-users-img">
                             <img src="/upload_files/{{$row->image}}" alt="" class="img-fluid">
-                        </div>
+                        </div> -->
                         <div class="testimonial__block-users-name">
                         {{$row->name}} <br>
                             <span>{{$row->location}}</span>

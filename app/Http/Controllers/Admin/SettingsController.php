@@ -110,6 +110,32 @@ class SettingsController extends Controller
     public function updateAboutUs(Request $request){
         $settings = settings::find($request->id);
         $settings->about_us = $request->editor1;
+
+        if($request->about1_image!=""){
+            $old_image = "upload_files/".$settings->about1_image;
+            if (file_exists($old_image)) {
+                @unlink($old_image);
+            }
+            if($request->file('about1_image')!=""){
+            $image = $request->file('about1_image');
+            $upload_image = rand() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('upload_files/'), $upload_image);
+            $settings->about1_image = $upload_image;
+            }
+        }
+
+        if($request->about2_image!=""){
+            $old_image = "upload_files/".$settings->about2_image;
+            if (file_exists($old_image)) {
+                @unlink($old_image);
+            }
+            if($request->file('about2_image')!=""){
+            $image = $request->file('about2_image');
+            $upload_image = rand() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('upload_files/'), $upload_image);
+            $settings->about2_image = $upload_image;
+            }
+        }
         $settings->save();
 
         return back();

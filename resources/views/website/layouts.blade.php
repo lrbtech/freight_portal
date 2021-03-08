@@ -164,10 +164,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-9">
                     <h2 class="text-uppercase text-white">Looking For Transport Services?</h2>
-                    <p class="text-capitalize text-white">We Will Assist You In The Best And Comfortable 
-                        Services
-                        For You
-                    </p>
+                    <p class="text-capitalize text-white">We will assist with the Best & Comprehensive services for you</p>
 
                 </div>
                 <div class="col-lg-3">

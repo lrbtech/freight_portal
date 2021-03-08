@@ -108,12 +108,18 @@
                     <div class="wrap__contact-open-hours">
                         <h5 class="text-capitalize">open hours</h5>
                         <ul class="list-unstyled">
-                            <li class="d-flex align-items-center justify-content-between"><span>Monday - Friday</span>
-                                <span>09 AM - 19 PM</span></li>
-                            <li class="d-flex align-items-center justify-content-between"><span>Saturday</span> <span>09
-                                    AM - 14 PM</span></li>
-                            <li class="d-flex align-items-center justify-content-between"><span>Sunday</span>
-                                <span>Closed</span></li>
+                            <li class="d-flex align-items-center justify-content-between">
+                                <span>Saturday to Thursday </span>
+                                <span>08 AM - 08 PM</span>
+                            </li>
+                            <li class="d-flex align-items-center justify-content-between">
+                                <span>Friday - Closed</span> 
+                                <span></span>
+                            </li>
+                            <!-- <li class="d-flex align-items-center justify-content-between">
+                                <span>Sunday</span>
+                                <span>Closed</span>
+                            </li> -->
                         </ul>
                     </div>
                     <h5>Info location</h5>
@@ -128,10 +134,17 @@
 
 
                             </li>
-                            <li>
+                            <!-- <li>
                                 <span>
                                     <i class="fa fa-phone"></i>
                                     <a href="tel:">{{$settings->mobile}}</a>
+                                </span>
+
+                            </li> -->
+                            <li>
+                                <span>
+                                    <i class="fa fa-phone"></i>
+                                    <a href="tel:">{{$settings->landline}}</a>
                                 </span>
 
                             </li>

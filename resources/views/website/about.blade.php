@@ -69,13 +69,13 @@
                     <div class="about__image">
                         <div class="about__image-top">
                             <div class="about__image-top-hover">
-                                <img src="/web/images/img-03.jpg" alt="" class="img-fluid">
+                                <img src="/upload_files/{{$settings->about2_image}}" alt="" class="img-fluid">
                             </div>
 
                         </div>
                         <div class="about__image-bottom">
                             <div class="about__image-bottom-hover">
-                                <img src="/web/images/img-02.jpg" alt="" class="img-fluid">
+                                <img src="/upload_files/{{$settings->about1_image}}" alt="" class="img-fluid">
                             </div>
                         </div>
                     </div>
