@@ -116,8 +116,13 @@
                     <!-- Search bar.// -->
                     <ul class="navbar-nav ">
                         <li>
-                            <a href="javascript:void(null)" class="btn btn-primary text-capitalize" data-toggle="modal" data-target="#quoteModal">
+                            @if(Auth::check())
+                            <a href="/user/dashboard" class="btn btn-primary text-capitalize">
+                                <i class="fa fa-plus-circle mr-1"></i> My Account</a>
+                            @else
+                              <a href="javascript:void(null)" class="btn btn-primary text-capitalize" data-toggle="modal" data-target="#quoteModal">
                                 <i class="fa fa-plus-circle mr-1"></i> request a quote</a>
+                            @endif
                         </li>
                         <li>
                             <a href="javascript:void(null)" class="btn btn-outline-primary text-capitalize" style="
@@ -131,6 +136,7 @@
     data-target="#loginModal">
                                 <i class="fa fa-sign-in mr-1 login_button"></i><span class="login_button">Login / Register</span> </a>
     @endif
+    
                         </li>
                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                     @csrf
