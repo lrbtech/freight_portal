@@ -15,7 +15,7 @@
             <div class="page-header">
               <div class="row">
                 <div class="col-lg-6 main-header">
-                  <h2>Change <span>Passowrd  </span></h2>
+                  <h2>Change <span>Password  </span></h2>
                 </div>
                 <div class="col-lg-6 breadcrumb-right">
                   <ol class="breadcrumb">
