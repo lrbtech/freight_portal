@@ -83,6 +83,9 @@
     color: #000;
 }
 }
+.modal {
+  overflow-y:auto;
+}
 	</style>
 	@yield('extra-css')
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/toastr/toastr.css')}}">
