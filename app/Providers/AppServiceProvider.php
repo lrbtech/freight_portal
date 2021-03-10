@@ -35,5 +35,11 @@ class AppServiceProvider extends ServiceProvider
 
             $view->with(compact('settings'));
         });
+        view()->composer('user.layouts', function($view) {
+    
+            $settings = settings::find(1);
+
+            $view->with(compact('settings'));
+        });
     }
 }
