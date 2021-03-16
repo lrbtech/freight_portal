@@ -43,6 +43,21 @@
       .hide{
        display:none
       }
+      .page-wrapper .page-main-header {
+    background-color: #233167;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
     </style>
   </head>
   <body main-theme-layout="ltr">
@@ -200,7 +215,9 @@
 
               <!-- <li><a class="right_side_toggle" href="#"><img class="img-fluid img-shadow-success" src="/assets/app-assets/images/dashboard/chat.png" alt=""></a></li> -->
 
-              <li class="onhover-dropdown"> <span class="media user-header"><img class="img-fluid" src="/assets/app-assets/images/dashboard/user.png" alt=""></span>
+              <li class="onhover-dropdown"> <span class="media user-header">
+                <img class="img-fluid" src="/upload_files/profile_icon.png" alt="" style="width:60px !important">
+              </span>
                 <ul class="onhover-show-div profile-dropdown">
                   <li class="gradient-primary">
                     <h5 class="f-w-600 mb-0">{{ Auth::guard('admin')->user()->name }}</h5>
