@@ -43,8 +43,8 @@
                           <tr>
                             <th>#</th>
                             <th>Booking Date</th>
-                            <th>From Address</th>
-                            <th>To Address</th>
+                            <th>START POINT</th>
+                            <th>REACH POINT</th>
                             <th>Service Details</th>
                             <th>Total Km</th>
                             <th>Total</th>

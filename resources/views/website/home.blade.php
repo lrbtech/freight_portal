@@ -189,14 +189,14 @@ visibility: visible;
                     </div>
                     <div class="col-6 col-lg-3 col-md-3">
                         <div class="form-group">
-                            <input placeholder="From Location" autocomplete="off" type="text" id="from_address" name="from_address" class="form-control">
+                            <input placeholder="START POINT" autocomplete="off" type="text" id="from_address" name="from_address" class="form-control">
                             <input readonly type="hidden" id="from_latitude" name="from_latitude" class="form-control">
                             <input readonly type="hidden" id="from_longitude" name="from_longitude" class="form-control">
                         </div>
                     </div>
                     <div class="col-6 col-lg-3 col-md-3">
                         <div class="form-group">
-                            <input placeholder="To Location" autocomplete="off" type="text" id="to_address" name="to_address" class="form-control">
+                            <input placeholder="REACH POINT" autocomplete="off" type="text" id="to_address" name="to_address" class="form-control">
                             <input readonly type="hidden" id="to_latitude" name="to_latitude" class="form-control">
                             <input readonly type="hidden" id="to_longitude" name="to_longitude" class="form-control">                        
                         </div>

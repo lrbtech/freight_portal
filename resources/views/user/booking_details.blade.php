@@ -97,10 +97,10 @@ visibility: visible;
                   <div class="card-body megaoptions-border-space-sm">
 
                     <ul class="nav nav-tabs nav-material nav-primary" id="info-tab" role="tablist">
-                      <li class="nav-item"><a class="nav-link active show" id="from_location_tab" data-toggle="tab" href="#from_location" role="tab" aria-controls="from_location" aria-selected="true"><i class="icofont icofont-ui-home"></i>From Location</a>
+                      <li class="nav-item"><a class="nav-link active show" id="from_location_tab" data-toggle="tab" href="#from_location" role="tab" aria-controls="from_location" aria-selected="true"><i class="icofont icofont-ui-home"></i>START POINT</a>
                         <div class="material-border"></div>
                       </li>
-                      <li class="nav-item"><a class="nav-link" id="to_location_tab" data-toggle="tab" href="#to_location" role="tab" aria-controls="to_location" aria-selected="false"><i class="icofont icofont-man-in-glasses"></i>To Location</a>
+                      <li class="nav-item"><a class="nav-link" id="to_location_tab" data-toggle="tab" href="#to_location" role="tab" aria-controls="to_location" aria-selected="false"><i class="icofont icofont-man-in-glasses"></i>REACH POINT</a>
                         <div class="material-border"></div>
                       </li>
                     </ul>
