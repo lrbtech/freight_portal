@@ -53,6 +53,7 @@
                         <thead>
                           <tr>
                             <th>#</th>
+                            <th></th>
                             <th>Booking Date</th>
                             <th>From Address</th>
                             <th>To Address</th>
@@ -101,6 +102,7 @@ var orderPageTable = $('#datatable').DataTable({
         "data":{ _token: "{{csrf_token()}}"}
     },
     "columns": [
+        {data: 'DT_RowIndex', name: 'DT_RowIndex'},
         {data: 'checkbox', name: 'checkbox'},
         { data: 'booking_date', name: 'booking_date' },
         { data: 'from_address', name: 'from_address' },
@@ -150,5 +152,21 @@ $(document).on('click','#save', function(){
   }
 });
 
+
+function Delete(id){
+  var r = confirm("Are you sure");
+  if (r == true) {
+    $.ajax({
+      url : '/admin/delete-booking/'+id,
+      type: "GET",
+      dataType: "JSON",
+      success: function(data)
+      {
+        toastr.success(data, 'Successfully Delete');
+        location.reload();
+      }
+    });
+  } 
+}
 </script>
 @endsection

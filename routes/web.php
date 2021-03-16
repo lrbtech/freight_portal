@@ -134,6 +134,8 @@ Route::group(['prefix' => 'admin'],function(){
 
     Route::get('/print-invoice/{id}', [App\Http\Controllers\Admin\BookingController::class, 'printInvoice']);
 
+    Route::get('/delete-booking/{id}', [App\Http\Controllers\Admin\BookingController::class, 'deleteBooking']);
+
     Route::get('/invoice-send-mail/{id}', [App\Http\Controllers\Admin\BookingController::class, 'invoiceSendMail']);
 
     Route::get('/booking-report', [App\Http\Controllers\Admin\ReportController::class, 'bookingreport']);

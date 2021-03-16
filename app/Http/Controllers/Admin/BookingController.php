@@ -45,6 +45,12 @@ class BookingController extends Controller
         return response()->json(["Successfully Update"], 200);
     }
 
+    public function deleteBooking($id){
+        $booking = booking::find($id);
+        $booking->delete();
+        return response()->json(["Successfully Update"], 200);
+    }
+
     public function getBooking(){
         $booking = booking::orderBy('id', 'DESC')->get();
 
@@ -105,6 +111,7 @@ class BookingController extends Controller
                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
                     <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(140px, 183px, 0px); top: 0px; left: 0px; will-change: transform;">
                     <a target="_blank" href="/admin/print-invoice/'.$booking->id.'" class="dropdown-item">Print</a>
+                    <a onclick="Delete('.$booking->id.')" href="#" class="dropdown-item">Delete</a>
                     </div>
                 </td>';
             })
