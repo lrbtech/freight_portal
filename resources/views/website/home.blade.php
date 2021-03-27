@@ -275,6 +275,7 @@ visibility: visible;
 
 						@foreach($service as $row)
                         @if(Auth::check())
+                        0 
                         <div class="item" onclick="openService({{$row->id}})">
                         @else
                         <div class="item" data-toggle="modal" 

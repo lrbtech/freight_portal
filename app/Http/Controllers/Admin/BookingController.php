@@ -150,7 +150,7 @@ class BookingController extends Controller
             //$message->cc('prasanthats@gmail.com')->subject('Freight Portals Invoice ID : #'.$booking->id);
             //$message->cc('thowsif@lrbinfotech.com')->subject('Freight Portals Invoice ID : #'.$booking->id);
             $message->from('info@lrbtech.com','Freight Portals');
-            $message->attachData($pdf->output(), 'freight_portals_invoice_'.$booking->id.'.pdf');
+            $message->attachData($pdf->output(), 'treight_portals_invoice_'.$booking->id.'.pdf');
             });
         }catch(JWTException $exception){
             $this->serverstatuscode = "0";

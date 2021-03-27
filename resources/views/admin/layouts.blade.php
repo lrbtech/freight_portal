@@ -270,17 +270,17 @@
                 <ul class="iconbar-mainmenu custom-scrollbar">
                   <li class="iconbar-header">Services</li>
 
-                  <li class="new-service"><a class="new-service" href="/admin/new-service">New Service</a></li>
+                  <li class="new-service"><a class="new-service" href="/admin/new-service">View Service</a></li>
 
                 </ul>
               </li>
 
               <li>
-                <a class="bar-icons" href="javascript:void(0)"><i class="pe-7s-id"></i><span>Truck</span></a>
+                <a class="bar-icons" href="javascript:void(0)"><i class="pe-7s-id"></i><span>Clients</span></a>
                 <ul class="iconbar-mainmenu custom-scrollbar">
-                  <li class="iconbar-header">Truck Details</li>
+                  <li class="iconbar-header">Client Details</li>
 
-                  <li class="truck"><a class="truck" href="/admin/truck">Truck Owner</a></li>
+                  <li class="truck"><a class="truck" href="/admin/truck">View Client</a></li>
 
                 </ul>
               </li>
