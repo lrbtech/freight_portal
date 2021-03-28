@@ -6,7 +6,7 @@
     background-color: #233564;
 }
 .bg-theme-overlay {
-    background-image: url(/web/images/slider1.jpg);
+    background-image: url(/web/images/braedcum.jpg);
     width: 100%;
     background-position: center 50%;
     background-size: cover;
