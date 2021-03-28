@@ -1,243 +1,276 @@
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
-<html>
-
-<head>
-<meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
 <style>
+#invoice{
+    padding: 0px;
+}
 
- /* Font Definitions */
- @font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0in;
-	margin-right:0in;
-	margin-bottom:8.0pt;
-	margin-left:0in;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
-@page WordSection1
-	{size:8.5in 11.0in;
-	margin:1.0in 1.0in 1.0in 1.0in;}
-div.WordSection1
-	{page:WordSection1;}
+.invoice {
+    position: relative;
+    background-color: #FFF;
+    min-height: 680px;
+    padding: 15px
+}
 
+.invoice header {
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #3989c6
+}
+
+.invoice .company-details {
+    text-align: right
+}
+
+.invoice .company-details .name {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.invoice .contacts {
+    margin-bottom: 20px
+}
+
+.invoice .invoice-to {
+    text-align: left
+}
+
+.invoice .invoice-to .to {
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.invoice .invoice-details {
+    text-align: right
+}
+
+.invoice .invoice-details .invoice-id {
+    margin-top: 0;
+    color: #3989c6
+}
+
+.invoice main {
+    padding-bottom: 50px
+}
+
+.invoice main .thanks {
+    margin-top: -100px;
+    font-size: 2em;
+    margin-bottom: 50px
+}
+
+.invoice main .notices {
+    padding-left: 6px;
+    border-left: 6px solid #3989c6
+}
+
+.invoice main .notices .notice {
+    font-size: 1.2em
+}
+
+.invoice table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 20px
+}
+
+.invoice table td,.invoice table th {
+    padding: 10px;
+    background: #eee;
+    border-bottom: 1px solid #fff
+}
+
+.invoice table th {
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 14px
+}
+
+.invoice table td h3 {
+    margin: 0;
+    font-weight: 400;
+    color: #3989c6;
+    font-size: 1.2em
+}
+
+.invoice table .qty,.invoice table .total,.invoice table .unit {
+    text-align: right;
+    font-size: 1.2em
+}
+
+.invoice table .no {
+    color: #fff;
+    font-size: 1.6em;
+    background: #3989c6
+}
+
+.invoice table .unit {
+    background: #ddd
+}
+
+.invoice table .total {
+    background: #3989c6;
+    color: #fff
+}
+
+.invoice table tbody tr:last-child td {
+    border: none
+}
+
+.invoice table tfoot td {
+    background: 0 0;
+    border-bottom: none;
+    white-space: nowrap;
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-top: 1px solid #aaa
+}
+
+.invoice table tfoot tr:first-child td {
+    border-top: none
+}
+
+.invoice table tfoot tr:last-child td {
+    color: #3989c6;
+    font-size: 1.4em;
+    border-top: 1px solid #3989c6
+}
+
+.invoice table tfoot tr td:first-child {
+    border: none
+}
+
+.invoice footer {
+    width: 100%;
+    text-align: center;
+    color: #777;
+    border-top: 1px solid #aaa;
+    padding: 8px 0
+}
+
+@media print {
+    .invoice {
+        font-size: 11px!important;
+        overflow: hidden!important
+    }
+
+    .invoice footer {
+        position: absolute;
+        bottom: 10px;
+        page-break-after: always
+    }
+
+    .invoice>div:last-child {
+        page-break-before: always
+    }
+}
 </style>
+<div id="invoice">
+    <div class="invoice overflow-auto">
+        <div style="min-width: 600px">
+            <header>
+                <div class="row">
+                <img style="width:100% !important;" src="assets/images/banner.png">
+                </div>
+            </header>
+            <main>
+                <div class="row contacts">
+                    <div class="col invoice-to">
+                        <div class="text-gray-light">BILLED TO:</div>
+                        <div class="name">Client Name : {{$user->name}}</div>
+                        <div class="email">Phone Number : {{$user->mobile}}</div>
+                        <div class="email">Email ID : {{$user->email}}</div>
+                        <!-- <div class="address">Address : {{$user->email}}</div> -->
+                        <div class="email">Emirate : UAE 'DUBAI'</div>
+                    </div>
+                    <!-- <div class="col invoice-details">
+                        <h1 class="invoice-id">INVOICE 3-2-1</h1>
+                        <div class="date">Date of Invoice: 01/10/2018</div>
+                        <div class="date">Due Date: 30/10/2018</div>
+                    </div> -->
+                </div>
 
-</head>
+                <div class="row">
+                    <div style="width:100% !important;" class="col invoice-to">
+                        <div class="text-gray-light">INVOICE:</div>
+                        <div class="date">Invoice Number</div>
+                        <div class="invoice-id">#{{$booking->id}}</div>
+                    </div>
+                    <div style="width:100% !important;margin-top:-40px !important;" class="col invoice-details">
+                    <div class="date">Date</div>
+                        <div class="date">{{$booking->date}}</div>
+                    </div>
+                </div>
+                <br><br>
 
-<body lang=EN-US style='word-wrap:break-word'>
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th class="text-left">DESCRIPTION</th>
+                            <th class="text-left">START-POINT</th>
+                            <th class="text-left">REACH-POINT</th>
+                            <th class="text-right">DISTANCE</th>
+                            <th class="text-right">RATE <br>PER KM</th>
+                            <th class="text-right">AMOUNT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">{{$booking->service_name}}y</td>
+                            <td class="text-left">{{$booking->from_address}}</td>
+                            <td class="text-left">{{$booking->to_address}}</td>
+                            <td class="qty">{{$booking->total_km}}</td>
+                            <td class="qty">{{$booking->rate_per_km}}</td>
+                            <td class="total">{{$booking->sub_total}} AED</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td colspan="2">SUBTOTAL</td>
+                        <td>{{$booking->sub_total}} AED</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td colspan="2">Discount</td>
+                        <td>0 AED</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td colspan="2">INVOICE TOTAL</td>
+                        <td>{{$booking->total}} AED</td>
+                    </tr>
+                    </tfoot>
+                </table>
+                <!-- <div class="thanks">Thank you!</div> -->
+                <div class="notices">
+                    <div>Terms and Conditions:</div>
+                    <div class="notice">{{$settings->print_terms_and_conditions}}</div>
+                </div>
 
-<div class=WordSection1>
+                <br><br><br>
+                <div class="row">
+                    <!-- <div style="width:100% !important;" class="col invoice-to">
+                        <div class="text-gray-light">INVOICE:</div>
+                        <div class="date">Invoice Number</div>
+                        <div class="invoice-id">#{{$booking->id}}</div>
+                    </div> -->
+                    <div style="width:100% !important;margin-top:0px !important;" class="col invoice-details">
+                        <div style="margin-right:25px !important;font-size:10px;" class="date">THIS IS A SYSTEM GENERATED INVOICE </div>
+                        <div style="margin-right:25px !important;font-size:10px;" class="date">TREIGHTPORTAL ©</div>
+                    </div>
+                </div>
 
-<center>
-<p class=MsoNormal>
-<img width=168 height=137
-id="Picture 2137151812" src="assets/images/logo2.png"></p>
-</center>
-
-<center>
-<p class=MsoNormal>TREIGHT PORTAL</p>
-</center>
-
-<p class=MsoNormal>Email id: services@treightportal.com|Website:
-www.treightportal.com | Phone no: {{$settings->mobile}}</p>
-
-<table class=MsoTableGrid cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;width:100%;'>
- <tr>
- <td style="width:70% !important;">
- <p class=MsoNormal><b><u>Client Particulars</u></b></p>
- <p>{{$user->name}}</p>
- <p>{{$user->email}}</p>
- </td>
- <td style="width:30% !important;;">
- <p>Invoice No : #{{$booking->id}}</p>
- <p>Invoice Date : {{$booking->date}}</p>
- <p>Sale Order No : </p>
- <p>Sale Order Date : </p>
- </td>
- </tr>
-</table>
-
-<p class=MsoNormal><b>Country &amp; Emirates Code</b>: UAE 'DUBAI'   </p>
-
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;width:100%'>
- <tr>
-
-  <td valign=top style='width:10%;border:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Serial No.</p>
-  </td>
-
-  <td valign=top style='width:25%;border:solid black 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Location</p>
-  </td>
-
-  <td valign=top style='width:25%;border:solid black 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Destination</p>
-  </td>
-
-  <!-- <td valign=top style='width:78.0pt;border:solid black 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Product
-  Description</p>
-  </td> -->
-
-  <td valign=top style='width:20%;border:solid black 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Distance
-  (kms)</p>
-  </td>
-
-  <td valign=top style='width:20%;border:solid black 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Amount (In
-  Dhs)</p>
-  </td>
-
- </tr>
- <tr>
-
-  <td  valign=top style='border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>1</p>
-  </td>
-
-  <td  valign=top style='border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->from_address}}</p>
-  </td>
-
-  <td  valign=top style='border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->to_address}}</p>
-  </td>
-
-  <!-- <td  valign=top style='border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>xx</p>
-  </td> -->
-
-  <td  valign=top style='border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->total_km}}</p>
-  </td>
-
-  <td  valign=top style='border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->sub_total}}</p>
-  </td>
-
- </tr>
-</table>
-
-<p class=MsoNormal><span style='color:white'> </span></p>
-
-<p class=MsoNormal> </p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;width:100%'>
- <tr>
-  <td width=353 valign=top style='width:264.75pt;border:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Amount in
-  Words:</p>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$amount_words}}</p>
-  <!-- <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Xxxxxxxxxx
-  xxxxxxxxxxxx</p> -->
-  </td>
-  <td width=144 valign=top style='width:1.5in;border:solid black 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Sub Total</p>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Vat 5%</p>
-  </td>
-  <td width=127 valign=top style='width:95.25pt;border:solid black 1.0pt;
-  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->sub_total}}</p>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->vat_amount}} </p>
-  </td>
- </tr>
- <tr>
-  <td width=353 valign=top style='width:264.75pt;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
-  </td>
-  <td width=144 valign=top style='width:1.5in;border-top:none;border-left:none;
-  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Total</p>
-  </td>
-  <td width=127 valign=top style='width:95.25pt;border-top:none;border-left:
-  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->total}}</p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal> </p>
-
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none;width:100%'>
- <tr>
-  <td valign=top style='width:60%;border:solid black 1.0pt;
-  padding:0in 5.4pt 0in 5.4pt;border-right:none !important;'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Terms &amp;
-  Conditions:</p>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:;text-align: justify;text-justify: inter-word;'>{{$settings->print_terms_and_conditions}} </p>
-  <!-- <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  </p> -->
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>This is a
-  System Generated Invoice.</p>
-  </td>
-  <td valign=top style='width:40%;border-left:none !important;'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'></p>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>TREIGHT PORTAL ©</p>
-  </td>
- </tr>
- <tr>
-  <td colspan="2" width=624 valign=top style='width:6.5in;border:solid black 1.0pt;
-  border-top:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Email id:
-  services@treightportal.com|Website: www.treightportal.com | Phone no: {{$settings->mobile}}</p>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>&nbsp;</p>
-  </td>
- </tr>
-</table>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal>&nbsp;</p>
-
+            </main>
+            <!-- <footer>
+                Invoice was created on a computer and is valid without the signature and seal.
+            </footer> -->
+        </div>
+        <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
+        <div></div>
+    </div>
 </div>
-
-</body>
-
-</html>

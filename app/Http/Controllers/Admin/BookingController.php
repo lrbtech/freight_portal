@@ -129,9 +129,9 @@ class BookingController extends Controller
         $user = User::find($booking->user_id);
         $settings = settings::find(1);
 
-        $amount_words = $this->displaywords($booking->total);
+        //$amount_words = $this->displaywords($booking->total);
 
-        $pdf = PDF::loadView('print.printinvoice',compact('booking','amount_words','user','settings'));
+        $pdf = PDF::loadView('print.printinvoice',compact('booking','user','settings'));
         $pdf->setPaper('A4');
         return $pdf->stream('report.pdf');
     }
@@ -140,12 +140,12 @@ class BookingController extends Controller
         $booking = booking::find($id);
         $user = truck_owner::find($booking->assign_driver_id);
         $settings = settings::find(1);
-        $amount_words = $this->displaywords($booking->total);
+        //$amount_words = $this->displaywords($booking->total);
 
-        $pdf = PDF::loadView('print.printinvoice',compact('booking','amount_words','user','settings'));
+        $pdf = PDF::loadView('print.printinvoice',compact('booking','user','settings'));
 
         try{
-            Mail::send('mail.invoice', compact('booking','amount_words','user','settings'), function($message)use($booking,$user,$pdf) {
+            Mail::send('mail.invoice', compact('booking','user','settings'), function($message)use($booking,$user,$pdf) {
             $message->to($user->email)->subject('Freight Portals Invoice ID : #'.$booking->id);
             //$message->cc('prasanthats@gmail.com')->subject('Freight Portals Invoice ID : #'.$booking->id);
             //$message->cc('thowsif@lrbinfotech.com')->subject('Freight Portals Invoice ID : #'.$booking->id);

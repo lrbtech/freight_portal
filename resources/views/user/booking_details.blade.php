@@ -537,6 +537,7 @@ function billingType() {
 }
 
 function Save(){
+    toastr.success('Please Wait...');
     var formData = new FormData($('#form')[0]);
     $("#save").attr("disabled", true);
     $.ajax({

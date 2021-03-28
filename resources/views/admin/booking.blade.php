@@ -133,12 +133,13 @@ $(document).on('click','#save', function(){
         order_id.push($(this).val());
     });
     if(order_id.length > 0){
+      toastr.success('Please Wait...');
         $.ajax({
             url:"/admin/checkbox-assign-agent",
             method:"GET",
             data:{id:order_id,agent_id:agent_id},
             success:function(data){
-              toastr.success(data);
+              toastr.success('Assigned Successfully');
               //window.location.href="/admin/new-shipment-request";
               var new_url = '/admin/get-booking';
               orderPageTable.ajax.url(new_url).load();
@@ -167,6 +168,35 @@ function Delete(id){
       }
     });
   } 
+}
+
+
+function PrintInvoice(id){
+  $.ajax({
+    url : '/admin/print-invoice/'+id,
+    type: "GET",
+    dataType: "JSON",
+    success: function(data)
+    {
+      var mywindow = window.open('', 'Print Invoice', 'height=600,width=800');
+      var is_chrome = Boolean(mywindow.chrome);
+      mywindow.document.write(data.html);
+      mywindow.document.close(); 
+      if (is_chrome) {
+        setTimeout(function() {
+        mywindow.focus(); 
+        mywindow.print(); 
+        mywindow.close();
+        window.location.href="/admin/booking";
+        }, 250);
+      } else {
+        mywindow.focus(); 
+        mywindow.print(); 
+        mywindow.close();
+        window.location.href="/admin/booking";
+      }
+    }
+  });
 }
 </script>
 @endsection
