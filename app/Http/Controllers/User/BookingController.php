@@ -114,7 +114,7 @@ class BookingController extends Controller
             })
             ->addColumn('total', function ($booking) {               
                 return '<td>
-                <p>' . $booking->total . '</p>
+                <p>' . $booking->sub_total . '</p>
                 </td>';
             })
             ->addColumn('action', function ($booking) {
