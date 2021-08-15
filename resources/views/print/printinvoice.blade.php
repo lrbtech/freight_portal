@@ -242,7 +242,7 @@
                     <tr>
                         <td colspan="3"></td>
                         <td colspan="2">INVOICE TOTAL</td>
-                        <td>{{$booking->total}} AED</td>
+                        <td>{{$booking->sub_total}} AED</td>
                     </tr>
                     </tfoot>
                 </table>

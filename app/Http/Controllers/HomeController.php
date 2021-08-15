@@ -98,7 +98,7 @@ public function contactsendmail(Request $request){
   $all = $request->all();
   $settings = settings::find(1);
   Mail::send('mail.contact_mail',compact('all'),function($message) use($all,$settings){
-       $message->to($settings->admin_email)->subject('Freight Portal Contact Page');
+       $message->to($settings->admin_email)->subject('Treight Portal Contact Page');
        $message->from('info@lrbtech.com',$all['name']);
   });
   return response()->json(['message'=>'Successfully Send'],200); 

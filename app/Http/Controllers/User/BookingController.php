@@ -157,10 +157,10 @@ class BookingController extends Controller
 
         try{
             Mail::send('mail.invoice', compact('booking','user','settings'), function($message)use($booking,$user,$pdf,$settings) {
-            $message->to($user->email)->subject('Freight Portals Invoice ID : #'.$booking->id);
-            $message->cc($settings->admin_email)->subject('Freight Portals Invoice ID : #'.$booking->id);
-            //$message->cc('thowsif@lrbinfotech.com')->subject('Freight Portals Invoice ID : #'.$booking->id);
-            $message->from('info@lrbtech.com','Freight Portals');
+            $message->to($user->email)->subject('Treight Portal Portals Invoice ID : #'.$booking->id);
+            $message->cc($settings->admin_email)->subject('Treight Portal Portals Invoice ID : #'.$booking->id);
+            //$message->cc('thowsif@lrbinfotech.com')->subject('Treight Portal Portals Invoice ID : #'.$booking->id);
+            $message->from('info@lrbtech.com','Treight Portal Portals');
             $message->attachData($pdf->output(), 'treight_portals_invoice_'.$booking->id.'.pdf');
             });
         }catch(JWTException $exception){

@@ -174,13 +174,13 @@ www.treightportal.com | Phone no: {{$settings->mobile}}</p>
   </td>
   <td width=144 valign=top style='width:1.5in;border:solid black 1.0pt;
   border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Sub Total</p>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Vat 5%</p>
+  <!-- <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Sub Total</p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>Vat 5%</p> -->
   </td>
   <td width=127 valign=top style='width:95.25pt;border:solid black 1.0pt;
   border-left:none;padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->sub_total}}</p>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->vat_amount}} </p>
+  <!-- <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->sub_total}}</p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->vat_amount}} </p> -->
   </td>
  </tr>
  <tr>
@@ -195,7 +195,7 @@ www.treightportal.com | Phone no: {{$settings->mobile}}</p>
   <td width=127 valign=top style='width:95.25pt;border-top:none;border-left:
   none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
   padding:0in 5.4pt 0in 5.4pt'>
-  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->total}}</p>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'>{{$booking->sub_total}}</p>
   </td>
  </tr>
 </table>

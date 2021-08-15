@@ -258,13 +258,16 @@ visibility: visible;
                           </div>
 
                           <div class="form-group row">
-                            <label class="col-sm-6 col-form-label">Sub Total</label>
+                            <label class="col-sm-6 col-form-label">Total</label>
                             <div class="col-sm-6">
                               <input readonly class="form-control" name="sub_total" id="sub_total" type="text">
                             </div>
                           </div>
 
-                          <div class="form-group row">
+                          <input readonly class="form-control" name="total" id="total" type="hidden">
+                          <input readonly class="form-control" name="vat_amount" id="vat_amount" type="hidden">
+
+                          <!-- <div class="form-group row">
                             <label class="col-sm-6 col-form-label">Vat 5%</label>
                             <div class="col-sm-6">
                               <input readonly class="form-control" name="vat_amount" id="vat_amount" type="text">
@@ -276,7 +279,7 @@ visibility: visible;
                             <div class="col-sm-6">
                               <input readonly class="form-control" name="total" id="total" type="text">
                             </div>
-                          </div>
+                          </div> -->
 
                       </div>
                     </div>
