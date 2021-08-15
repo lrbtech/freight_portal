@@ -159,7 +159,7 @@ Route::group(['prefix' => 'user'],function(){
     Route::get('/change-password', [App\Http\Controllers\User\SettingsController::class, 'changePassword']);
     Route::POST('/change-password', [App\Http\Controllers\User\SettingsController::class, 'updateChangePassword']);
 
-    Route::get('/invoice-send-mail/{id}', [App\Http\Controllers\Admin\BookingController::class, 'invoiceSendMail']);
+    Route::get('/invoice-send-mail/{id}', [App\Http\Controllers\User\BookingController::class, 'invoiceSendMail']);
 
 });
 
